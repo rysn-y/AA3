@@ -1,0 +1,82 @@
+body {
+    min-height: 100vh;
+    padding: 10px;
+    text-align: center;
+    background: linear-gradient(to bottom, cyan, #8f67ec);
+    font-family: "Nunito", Calibri;
+}
+/* Container setup */
+#project1, #project2 {
+    display: flex; 
+    align-items: center; /* align to middle*/
+    width: 75%;
+    max-width: 80%;
+    margin: 20px auto;
+    padding: 10px;
+    background: linear-gradient(30deg, blue, red);
+    border-radius: 15px;
+}
+
+img {
+    border-radius: 15px;
+    max-width: 600px; /*max width for images so it stays align*/ 
+}
+label {
+    margin-top: -90px; 
+    font-size: 18px; 
+}
+
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+
+
+/* For screens < 768px */
+@media (max-width: 768px) {
+    
+    #menu {
+        flex-direction: row;
+    }
+
+    #menu a {
+        font-size: 20px;
+    }
+
+    #project1, #project2 {
+        width: 95%;
+        max-width: 600px;
+    }
+
+    img {
+        max-width: 50%; /* Images scale TO fit  container */
+    }
+    label{
+        margin-top: -10px;
+        font-size: 10px; 
+    }
+}
+
+/* For screens < 480px */
+@media (max-width: 480px) {
+    #menu{
+        flex-direction: row;
+    }
+    #menu a {
+        font-size: 14px;
+        margin: 5px;
+    }
+
+    #project1, #project2 {
+        width: 95%; 
+        max-width: 100%; 
+    }
+
+    footer {
+        font-size: 12px; /* Reduce footer text size on small screens */
+    }
+}

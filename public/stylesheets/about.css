@@ -1,0 +1,13 @@
+body {
+    min-height: 100vh;
+    text-align: center;
+    background: linear-gradient(to bottom, cyan, #8f67ec); 
+    font-family: "Nunito", Calibri;
+}
+
+
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}

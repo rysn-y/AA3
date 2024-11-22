@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       
+        <meta charset="UTF-8"> <!--Inital setup for page including imported font-->
+        <title>Contact</title> <!--viewports and reference css style sheet-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap  -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- Fonts/Icons -->
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/3d9a968462.js" crossorigin="anonymous"></script>
+        <!-- CSS -->
+        <link rel="stylesheet" href="/stylesheets/about.css">
+    </head>
+    <!-- navv menu -->
+    <header class="text-center py-3"> <!--vert paddin-->
+        
+        <a href="/contact" class="font-weight-bold mx-3">Contact</a>
+        <a href="/about" class="font-weight-bold text-dark mx-3">About Me</a>
+        <a href="/projects" class="font-weight-bold mx-3">Projects</a>
+        <a href="/" class="font-weight-bold mx-3">Home</a>
+    </nav>
+
+</header>
+    <body>
+        
+        <header>
+            <h1>Welcome to my Page</h1>
+        </header>
+
+        <p>Hello I am Ryan and I currently study at Ontario Tech University</p>
+
+        <img src="/images/IMG_3224.png" style="width:130px; border-radius: 15px;">
+        <br>
+        <video id="myvid" controls poster="/images/lifee.png" id="myvid"width="300" height="200px"  preload="auto">
+            <source src="/videos/video.mp4" type="video/mp4">
+            <source src="/vieos/video.ogv" type="video/mp4">
+        </video>
+        <br>
+        <button class="btn btn-warning" onclick="PlayPause()">Play/Pause</button>
+        <button  class="btn btn-warning" onclick="restart()">Restart</button>
+
+        <script>
+            var mybtn = document.getElementById("myvid")
+            function PlayPause(){
+
+                if(mybtn.paused)
+                    mybtn.play();
+                else
+                    mybtn.pause();
+            
+            }
+        </script>
+        <script>
+           function restart(){
+            var vid = document.getElementById('myvid')
+            vid.currentTime = 0
+
+           }
+        </script>
+        
+        
+    
+        <footer>
+            <i class="fa-solid fa-face-smile-beam"></i>
+            <a href="https://github.com/rysn-y"target="_blank">Github</a>
+            <p>©2024 by Rysn YEE</p>
+        </footer>
+        <!-- Bootstrap -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJTvMw2HEqE2I7Og6GFjA7rQQax5AHgGhZl27XxUQqnZf9QBs" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-a5J4N5A2RgRoTa/XBe3p9guoSZ+ZcXfZ+Frx49FdWl+GhwxR7xMyKNCa3kcxmG3p" crossorigin="anonymous"></script>
+
+    </body>
+</html>

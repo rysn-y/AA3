@@ -1,0 +1,25 @@
+body{
+    text-align: center;
+    min-height: 100vh; /* viewport height percentage  */
+    background: linear-gradient(to bottom,cyan ,#8f67ec);
+    font-family: "Nunito",Calibri;
+}
+
+
+/*navigation styling*/
+nav a{
+    transition: all .2s ease; /*navigation transitioning upon hover*/
+}
+nav a:hover {
+    background-color: #80EF80; 
+    color: black; 
+    border-radius: 15px;
+    padding: 10px;
+    
+}
+
+footer{
+    text-align: center;
+}
+
+
