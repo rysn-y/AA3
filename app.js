@@ -40,4 +40,35 @@ app.use(function(err, req, res, next) {
 
 
 
+require('dotenv').config();
+const mongoose = require('mongoose');
+
+// MongoDB Connection
+mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://ryanye:gcdEd8qxge70lvSe@a3.gfyrf.mongodb.net/?retryWrites=true&w=majority&appName=a3', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+  .then(() => console.log('✅ MongoDB connected successfully'))
+  .catch((err) => console.error('❌ MongoDB connection error:', err));
+
+
+
+const tasksRouter = require('./routes/tasks'); // Import tasks routes
+
+  require('dotenv').config(); // Load environment variables
+// Middleware
+app.use(express.urlencoded({ extended: true })); // Parse URL-encoded form data
+
+app.set('view engine', 'ejs'); // EJS as the view engine
+app.set('views', './views'); // views directory
+
+// Routes
+app.use('/tasks', tasksRouter); 
+
+
+
+
 module.exports = app;
+
+
+

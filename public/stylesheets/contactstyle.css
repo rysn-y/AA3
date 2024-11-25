@@ -1,8 +1,0 @@
-
-body {
-    min-height: 100vh; /* Ensure full viewport height */
-    padding: 10px;
-    font-family: "Nunito", Calibri;
-    background: linear-gradient(to bottom, cyan, #8f67ec);
-}
-

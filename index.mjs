@@ -11,6 +11,8 @@ const ses = new AWS.SES();
  * @param {Object} event - The event object containing email details.
  * @returns {Object} - The response object.
  */
+require('dotenv').config();
+
 export const handler = async (event) => {
   const { toEmail, subject, body } = event;
 
@@ -24,7 +26,7 @@ export const handler = async (event) => {
       },
       Subject: { Data: subject },
     },
-    Source: 'ryan.ye@ontariotechu.net', // Replace with your verified SES email
+    Source: 'ryan.ye@ontariotechu.net', 
   };
 
   try {
